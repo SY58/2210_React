@@ -6,6 +6,14 @@ class App extends Component{
   //render() 메소드에서 리턴해주는 jsx를 활용해서 화면 구성이 된다.
   render(){
     let myName="바나나";
+    //요소에 적용할 인라인 css를 object로 정의하고 적용할 수 있다.
+    const boxStyle={
+      width:"100px",
+      height: "100px",
+      border:"1px solid red",
+      backgroundColor:"yellow" //여러 단어로 구성된 속성은 camel case를 사용한다.
+    };
+
     return(
       <div className='container'>
         <h1>인덱스 페이지입니다.</h1>
@@ -23,6 +31,8 @@ class App extends Component{
         <button className='btn btn-primary' onClick={()=>{
           alert("버튼을 눌렀네요?");
         }}>눌러보셈</button>
+        {/* css가 정의된 object를 이용해서 inline css를 적용시킬 수가 있다. */}
+        <div style={boxStyle}>box</div>
       </div>
     );
   }
